@@ -81,7 +81,7 @@ def create_member(email, first_name, last_name, member_type, admission_number=No
 				"assign_to": assign_to_list,
 				"doctype": 'Member',
 				"name": member.name
-			})
+			}, ignore_permissions=True)
         frappe.db.commit()
 
         return member.name  # Return the name of the newly created member
